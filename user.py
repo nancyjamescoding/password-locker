@@ -54,7 +54,7 @@ class  Details:
         self.account = account
         self.username = username
         self.password  = password
-        
+
     def save_details(self):
         '''
         method that saves details of a new user
@@ -66,6 +66,15 @@ class  Details:
         method that deletes saved details of a user
         '''
         Details.details_list.remove(self)
+    @classmethod
+    def find_details(cls,account):
+        '''
+
+        '''
+        for detail in Details.details_list:
+            if detail.account == account:
+                return detail
+    
     
 
 
