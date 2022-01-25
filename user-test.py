@@ -73,7 +73,7 @@ class TestDetails(unittest.TestCase):
         self.new_credential.delete_credentials()
         self.assertEqual(len(Details.details_list),1)
 
-    def test_find_credential(self):
+    def test_find_details(self):
         """
         test to check if we can find a detail by account name and display the details
         """
@@ -85,3 +85,22 @@ class TestDetails(unittest.TestCase):
 
         self.assertEqual(the_credential.account,test_credential.account)    
     
+    def test_details_exist(self):
+        """
+        test to check if we can return a true or false based on whether we find or can't find the credential.
+        """
+        self.new_credential.save_details()
+        the_credential = Details("Twitter", "nancyjames", "12345")  
+        the_credential.save_details()
+        credential_is_found = Details.if_credential_exist("Twitter")
+        self.assertTrue(credential_is_found)
+
+    def test_display_saved_credentials(self):
+        '''
+        method that displays all the credentials that has been saved by the user
+        '''
+
+        self.assertEqual(Details.display_details(),Details.details_list)
+
+if __name__ == "__main__":
+    unittest.main()    
