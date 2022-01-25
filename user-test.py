@@ -23,3 +23,20 @@ def test_save_user(self):
         """
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
+class TestDetails(unittest.TestCase):
+    """
+    A test class that defines test cases for details class
+    """ 
+    def setUp(self):
+        """
+        Method that runs before each individual ddetails test methods run.
+        """
+        self.new_details = Details('Gmail','nancy_ndungu','yx5Gij43')
+    def test_init(self):
+        """
+        Test case to check if a new Credentials instance has been initialized correctly
+        """
+        self.assertEqual(self.new_credential.account,'Gmail')
+        self.assertEqual(self.new_credential.userName,'Owiti_Charles')
+        self.assertEqual(self.new_credential.password,'yx5Gij43')
+            
