@@ -36,7 +36,25 @@ class  Details:
     '''
     class that generates an instance of the user's details
     '''   
-    details_list=[]    
+    details_list=[]
+    @classmethod
+    def verify_user(cls,username,password):
+        '''
+        method to verify user in the list
+        '''
+        a_user = ''
+        for user in User.user_list:
+            if (user.username == username and password.password == password):
+                a_user == user.username
+        return a_user
+    def __init__(self,account,username, password):
+        '''
+        method that defines the details to be saved
+        '''
+        self.account = account
+        self.username = username
+        self.password  = password
+        
 
 
 
