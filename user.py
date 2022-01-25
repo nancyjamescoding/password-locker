@@ -55,6 +55,18 @@ class  Details:
         self.username = username
         self.password  = password
         
+    def save_details(self):
+        '''
+        method that saves details of a new user
+        '''     
+        Details.details_list.append(self) 
+
+    def delete_details(self):
+        '''
+        method that deletes saved details of a user
+        '''
+        Details.details_list.remove(self)
+    
 
 
 
