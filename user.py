@@ -69,14 +69,22 @@ class  Details:
     @classmethod
     def find_details(cls,account):
         '''
-
+         method that finds details saved by the user 
         '''
         for detail in Details.details_list:
             if detail.account == account:
                 return detail
+    @classmethod
+    def details_exist(cls, account):
+        """
+        Method that returns true or false and checks if a detail exists from the detail list 
+        """
+        for detail in cls.details_list:
+            if detail.account == account:
+                return True
+        return False
     
     
-
 
 
 
