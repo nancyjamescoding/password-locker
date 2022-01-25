@@ -32,6 +32,11 @@ class User:
       '''
       User.user_list.remove(self)
     
+class  Details:
+    '''
+    class that generates an instance of the user's details
+    '''   
+    details_list=[]    
 
 
 
