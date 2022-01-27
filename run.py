@@ -163,67 +163,6 @@ def main():
             print("Wrong entry, Check your entry again and let it match those in the menu")
     else:
             print("Please enter a valid input to continue")
-            
-#             print('create password')
-#             created_user_password = input()
-
-#             print('confirm password')
-#             confirm_password=input()
-
-
-#             while confirm_password != created_user_password:
-#                 print("password did not match")
-#                 print("enter your password")
-#                 created_user_password = input()
-#                 print("confirm your password")
-#                 confirm_password=()
-
-#             else:
-#                 print(f"congratulations {created_user_name}! your account was created successfully") 
-#                 print('\n')  
-#                 print("proceed to login") 
-#                 print("Username")
-#                 entered_username =input()
-#                 print("password")
-#                 entered_password = input()
-
-#             while entered_username != created_user_name or entered_password != entered_password:
-#                 print("invalid username or password!")  
-#                 print("Username")
-#                 entered_username=input()
-#                 print("password")
-#                 entered_password=input()
-
-#             else:
-#                 print(f"Welcome {entered_username} your new account!") 
-#                 print('\n')
-
-#         elif  short_code == 'lg':
-#             print("welcome")
-#             print("enter username")
-#             default_user_name = input()
-
-#             print("enter password")
-#             default_password = input()
-#             print('\n')
-
-#             while entered_username != default_user_name or entered_password != default_password:
-#                 print("wrong username or password. username")
-#                 print("enter username")
-#                 default_user_name = input()
-
-#                 print("password")
-#                 default_password =input()
-#                 print('\n')
-
-#             else: 
-#                 print ("login sucessful")
-
-
-#         elif short_code == 'ex':
-#             break
-#         else:
-#             print("enter valid code to continue")
 
 if __name__ == '__main__':
     main()    
