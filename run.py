@@ -78,7 +78,7 @@ def main():
 
     while True:
 
-        print("welcome to password locker: to create new user enter'nu':To login 'lg': or 'ex' to exit the system ")
+        print("Welcome to password locker..\n To create new user enter'nu'..\n To login 'lg'\n or 'ex' to exit the system ")
         print('\n')
         print("select a short code to navigate through")
         short_code=input().lower()
@@ -90,7 +90,7 @@ def main():
             print('*' * 50)
             username = input('username: ')
             while True:
-                print("To Enter password 'et' :\n 'GP'To generate random Password")
+                print("To Enter password 'et' :\n 'To generate random Password 'gp'")
                 choose_password = input().lower().strip()
                 if choose_password == 'et':
                     password = input("Enter Password\n")
@@ -99,8 +99,8 @@ def main():
                 elif choose_password == 'gp':
                     password = generate_Password()
                     break  
-            else:
-                print("Invalid password please try again")
+                else:
+                    print("Invalid code please enter 'et' or 'gp' ")
             save_user(create_new_user(username,password))
             print("*"*50)
             print(f"Hello {username}, Your account has been created succesfully! Your password is: {password}")
@@ -161,8 +161,7 @@ def main():
             break
         else:
             print("Wrong entry, Check your entry again and let it match those in the menu")
-    else:
-            print("Please enter a valid input to continue")
+
 
 if __name__ == '__main__':
     main()    
